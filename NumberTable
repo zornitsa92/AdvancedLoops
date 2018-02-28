@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NumberTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int row = 0; row < n; row++)
+            {
+                int number = row + 1;
+                for (int col = 0; col < n; col++)
+                {
+                   
+                    if (number <= n)
+                    {
+                        Console.Write($"{number} "); 
+                    }
+                    else
+                    {
+                        Console.Write($"{2 * n - number} ");
+                    }
+                    number++;
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
